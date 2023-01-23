@@ -11,7 +11,6 @@ export default function LoginPage() {
     if ((localStorage.getItem('LoginStatus') == 'Login')) {
       console.log('login')
       navigate('/DefaultLayout')
-
     }
     else{
         navigate('/')
@@ -21,6 +20,7 @@ export default function LoginPage() {
     const handleSubmit = (values) => {
         if (values.email == 'ranjana20@gmail.com' && values.password == "Ranjana@123") {
             localStorage.setItem('LoginStatus', 'Login')
+            navigate('/DefaultLayout')
         }
         else {
             swal('Invalid User Login')

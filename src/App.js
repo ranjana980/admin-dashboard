@@ -13,7 +13,7 @@ function App() {
     <div className="">
       <BrowserRouter>
         <Routes>
-          <Route index path={'/'} element={<LoginPage />} />
+          <Route index path='/' element={<LoginPage />} />
           <Route path={'/DefaultLayout'} element={<DefaultLayout />} />
         </Routes>
       </BrowserRouter>
