@@ -15,7 +15,7 @@ export default function Navbar() {
             <AlertIcon className='text-gray-300 mr-10' />
             <EmailIcon className='text-gray-300 mr-10' />
           </div>
-          <img src='https://suvidhacsp.com/profile_picture/1.png' className='w-[50px] ' />
+          <img src='https://suvidhacsp.com/profile_picture/1.png' className='w-[50px] p-2' />
         </div>
       </div>
     </div>
