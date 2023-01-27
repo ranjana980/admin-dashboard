@@ -21,6 +21,7 @@ export default function LoginPage() {
         if (values.email == 'admin@gmail.com' && values.password == "admin@123") {
             localStorage.setItem('LoginStatus', 'Login')
             navigate('/DefaultLayout')
+            swal('Login SuccessFully')
         }
         else {
             swal('Invalid User Login')

@@ -12,11 +12,12 @@ import ArrowLeftIcon from '@material-ui/icons/KeyboardArrowRight';
 import ArrowRightIcon from '@material-ui/icons/KeyboardArrowLeft';
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from 'react-router-dom'
+import  KeyboardArrowDown  from '@material-ui/icons/KeyboardArrowDown';
 
 export default function SideNavbar() {
   // const [Menu,setMenu]=useState(false)
   const navigate = useNavigate()
-
+  const [id, setId] = useState('')
   const FormData = useSelector((state) => state.FormDataReducer);
   const { Menu } = FormData
   const dispatch = useDispatch()
@@ -27,25 +28,38 @@ export default function SideNavbar() {
         <h6 className={`${Menu ? 'ml-3 text-sm' : 'pl-0 text-xs'}  `}>DashBoard</h6>
       </div>
       {/* <div className={`${Menu?'block':'flex'} `}> */}
-        <div className={`p-1 cursor-pointer text-center ${Menu ? 'flex p-3' : 'block'}`}>
-          <div className={` ${Menu ? 'flex w-[300px] ' : 'block'}`}>
-            <GroupsIcon style={{ fontSize: '20px' }} />
-            <h6 className={`${Menu ? 'ml-3 text-sm' : 'pl-0 text-xs'}  `}>Members</h6>
-          </div>
-
-          {Menu ? <ArrowLeftIcon style={{ fontSize: '20px' }} className='' /> : ""}
-
+      <div className={`p-1 cursor-pointer text-center ${Menu ? 'flex p-3' : 'block'}`} onClick={() => {
+        if (id != 'member') {
+          setId('member')
+        }
+        else {
+          setId('')
+        }
+      }}>
+        <div className={` ${Menu ? 'flex w-[300px] ' : 'block'}`}>
+          <GroupsIcon style={{ fontSize: '20px' }} />
+          <h6 className={`${Menu ? 'ml-3 text-sm' : 'pl-0 text-xs'}  `}>Members</h6>
         </div>
-        <div className='bg-white   ml-3 p-2 rounded-[5px]'>
-          <div className='p-[4px] rounded-[5px] hover:bg-gray-100 cursor-pointer' onClick={() => navigate('/MemberList')}>
-            <p className='p-[4px] text-black leading-[5px]'>Member List</p>
-          </div>
-          <div className='p-[4px] rounded-[5px] hover:bg-gray-100 cursor-pointer' onClick={() => navigate('/AddMember')}>
-            <p className='p-[4px] text-black leading-[5px]' >Add Member</p>
-          </div>
+        {Menu ? id=='member'?<KeyboardArrowDown style={{ fontSize: '20px' }}/>:
+        <ArrowLeftIcon style={{ fontSize: '20px' }} className='' /> : ""}
+      </div>
+      {id == 'member' ? <div className='bg-white   ml-3 p-2 rounded-[5px]'>
+        <div className='p-[4px] rounded-[5px] hover:bg-gray-100 cursor-pointer' onClick={() => navigate('/MemberList')}>
+          <p className='p-[4px] text-black leading-[5px]'>Member List</p>
         </div>
+        <div className='p-[4px] rounded-[5px] hover:bg-gray-100 cursor-pointer' onClick={() => navigate('/AddMember')}>
+          <p className='p-[4px] text-black leading-[5px]' >Add Member</p>
+        </div>
+      </div> : ""}
       {/* </div> */}
-      <div className={`p-1 cursor-pointer text-center ${Menu ? 'flex p-3' : 'block'}`}>
+      <div className={`p-1 cursor-pointer text-center ${Menu ? 'flex p-3' : 'block'}`} onClick={() => {
+        if (id != 'Request') {
+          setId('Request')
+        }
+        else {
+          setId('')
+        }
+      }}>
         <div className={` ${Menu ? 'flex w-[300px] ' : 'block'}`}>
           <AddShoppingCart style={{ fontSize: '20px' }} />
           <h6 className={`${Menu ? 'ml-3 text-sm' : 'pl-0 text-xs'}  `}>Request</h6>
