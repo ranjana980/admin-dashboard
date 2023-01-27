@@ -22,7 +22,7 @@ export default function SideNavbar() {
   const dispatch = useDispatch()
   return (
     <div className={`text-white  ${Menu ? 'w-[190px]' : 'w-[90px]'}`}>
-      <div className={` cursor-pointer text-center border-b  solid border-teal-200 ${Menu ? 'flex p-3' : 'block'}`}>
+      <div className={` cursor-pointer text-center border-b  solid border-teal-200 ${Menu ? 'flex p-3' : 'block'}`} onClick={() => navigate('/DefaultLayout')}>
         <i className="fa fa-tachometer text-sm text-white" style={{ fontSize: '20px' }} aria-hidden="true"></i>
         <h6 className={`${Menu ? 'ml-3 text-sm' : 'pl-0 text-xs'}  `}>DashBoard</h6>
       </div>
