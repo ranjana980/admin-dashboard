@@ -18,7 +18,7 @@ export default function LoginPage() {
   }, [])
  
     const handleSubmit = (values) => {
-        if (values.email == 'ranjana20@gmail.com' && values.password == "Ranjana@123") {
+        if (values.email == 'admin@gmail.com' && values.password == "admin@123") {
             localStorage.setItem('LoginStatus', 'Login')
             navigate('/DefaultLayout')
         }
