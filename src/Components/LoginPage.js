@@ -43,8 +43,8 @@ export default function LoginPage() {
 
     }
     return (
-        <div className='h-[100%] '>
-            <div className='flex justify-center'>
+        <div className=' '>
+            <div className='flex justify-center pb-[225px]'>
                 <div className='mt-10 grid lg:grid-cols-12 xs:grid-cols-12 md:grid-cols-12  bg-white sticky rounded-[5px]'>
                     <div className='lg:col-span-6  xs:none lg:block login-bg bg-center rounded-[5px]' >
                     </div>
@@ -57,17 +57,17 @@ export default function LoginPage() {
                                 <div className=' '>
                                     <h2 className='text-[25px] text-center '>Welcome Back!</h2>
                                     <div className='flex justify-center '>
-                                        <div className='border-b-2  mt-5 p-5 '>
+                                        <div className='border-b-2   p-3 '>
                                             <Formik initialValues={initVal} validationSchema={ValidateSchema} onSubmit={handleSubmit}>
                                                 {(props) => (
                                                     <Form>
                                                         <div>
-                                                            <input name="email" onChange={(e) => handleChange(e, props.setFieldValue)} placeholder='Enter Your email ' className='rounded-[90px] min-w-[300px] border-2 border-gray-300 p-2 text-gray-300 ' />
+                                                            <input name="email" onChange={(e) => handleChange(e, props.setFieldValue)} placeholder='Enter Your email ' className='rounded-[90px] min-w-[300px] border-2 border-gray-300 p-2  ' />
 
                                                         </div>
                                                         <ErrorMessage className='text-start ' name="email">{msg => <div className='text-red-600'>{msg}</div>}</ErrorMessage>
                                                         <div>
-                                                            <input name='password' onChange={(e) => handleChange(e, props.setFieldValue)} placeholder='Password' className='rounded-[90px] min-w-[300px] border-2 border-gray-300 p-2 text-gray-300  mt-2' />
+                                                            <input name='password' onChange={(e) => handleChange(e, props.setFieldValue)} placeholder='Password' className='rounded-[90px] min-w-[300px] border-2 border-gray-300 p-2   mt-2' />
                                                         </div>
                                                         <ErrorMessage className='text-start ' name="password">{msg => <div className='text-red-600'>{msg}</div>}</ErrorMessage>
                                                         <div>
@@ -78,7 +78,7 @@ export default function LoginPage() {
                                             </Formik>
                                         </div>
                                     </div>
-                                    <Link to='/'><h6 className='text-teal-500 mt-3  text-sm'>Forgot Password?</h6></Link>
+                                    <Link to='/'><h6 className='text-teal-500 mt-3 text-center   text-sm'>Forgot Password?</h6></Link>
                                 </div>
                             </div>
                         </div>
