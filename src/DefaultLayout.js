@@ -19,18 +19,18 @@ export default function DefaultLayout() {
         }
     }, [])
     return (
-        <div>
+        // <div>
             <div className='grid grid-cols-12'>
-                <div className={`lg:${Menu?'col-start-1 col-span-2':'col-span-1'} md:${Menu?'col-start-1 col-span-2':'col-span-1'} sm:col-span-0 xs:col-span-0 sm:hidden xs:hidden md:block lg:block`}>
+                <div className={`lg:${Menu?'col-span-2':'col-span-1'} md:${Menu?'col-span-2':'col-span-1 '} xl:${Menu?'col-span-2':'col-span-1 '} sm:col-span-0 xs:col-span-0 sm:hidden xs:hidden md:block lg:block xl:block`}>
                     <SideNavbar />
                 </div>
-                <div className={`lg:${Menu?'col-span-10':'col-span-11'} md:${Menu?'col-span-10':'col-span-11'} sm:col-span-12 xs:col-span-12`}>
+                <div className={`${Menu?'lg:col-span-10':'lg:col-span-11'} ${Menu?'md:col-span-10':'md:col-span-11'} ${Menu?'xl:col-span-10':'xl:col-span-11'}1 sm:col-span-12 xs:col-span-12`}>
                     <Navbar />
                     <DashBoard />
                 </div>
 
             </div>
 
-        </div>
+        // </div>
     )
 }

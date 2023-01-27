@@ -21,13 +21,13 @@ export default function SideNavbar() {
   const { Menu } = FormData
   const dispatch = useDispatch()
   return (
-    <div className={`text-white  ${Menu ? 'w-[220px]' : 'w-[90px]'}`}>
+    <div className={`text-white  ${Menu ? 'w-[190px]' : 'w-[90px]'}`}>
       <div className={` cursor-pointer text-center border-b  solid border-teal-200 ${Menu ? 'flex p-3' : 'block'}`}>
         <i className="fa fa-tachometer text-sm text-white" style={{ fontSize: '20px' }} aria-hidden="true"></i>
         <h6 className={`${Menu ? 'ml-3 text-sm' : 'pl-0 text-xs'}  `}>DashBoard</h6>
       </div>
       <div className={`p-1 cursor-pointer text-center ${Menu ? 'flex p-3' : 'block'}`}>
-        <div className={` ${Menu ? 'flex w-[350px] ' : 'block'}`}>
+        <div className={` ${Menu ? 'flex w-[300px] ' : 'block'}`}>
           <GroupsIcon style={{ fontSize: '20px' }} />
           <h6 className={`${Menu ? 'ml-3 text-sm' : 'pl-0 text-xs'}  `}>Members</h6>
         </div>
@@ -40,46 +40,46 @@ export default function SideNavbar() {
           <p className='p-[4px] text-black leading-[5px]'>Member List</p>
         </div>
         <div className='p-[4px] rounded-[5px] hover:bg-gray-100 cursor-pointer' onClick={()=>navigate('/AddMember')}>
-           <p className='p-[4px] text-black leading-[5px]' text-sm>Add Member</p>
+           <p className='p-[4px] text-black leading-[5px]' >Add Member</p>
         </div>
       </div>
       <div className={`p-1 cursor-pointer text-center ${Menu ? 'flex p-3' : 'block'}`}>
-        <div className={` ${Menu ? 'flex w-[350px] ' : 'block'}`}>
+        <div className={` ${Menu ? 'flex w-[300px] ' : 'block'}`}>
           <AddShoppingCart style={{ fontSize: '20px' }} />
           <h6 className={`${Menu ? 'ml-3 text-sm' : 'pl-0 text-xs'}  `}>Request</h6>
         </div>
         {Menu ? <ArrowLeftIcon style={{ fontSize: '20px' }} className='cursor-pointer' /> : ""}
       </div>
       <div className={`p-1 cursor-pointer text-center ${Menu ? 'flex p-3' : 'block'}`}>
-        <div className={` ${Menu ? 'flex w-[350px] ' : 'block'}`}>
+        <div className={` ${Menu ? 'flex w-[300px] ' : 'block'}`}>
           <ListIcon style={{ fontSize: '20px' }} />
           <h6 className={`${Menu ? 'ml-3 text-sm' : 'pl-0 text-xs'}  `}>History</h6>
         </div>
         {Menu ? <ArrowLeftIcon style={{ fontSize: '20px' }} className='cursor-pointer' /> : ""}
       </div>
       <div className={`p-1 cursor-pointer text-center ${Menu ? 'flex p-3' : 'block'}`}>
-        <div className={` ${Menu ? 'flex w-[350px] ' : 'block'}`}>
+        <div className={` ${Menu ? 'flex w-[300px] ' : 'block'}`}>
           <SummarizeIcon style={{ fontSize: '20px' }} />
           <h6 className={`${Menu ? 'ml-3 text-sm' : 'pl-0 text-xs'}  `}>Report</h6>
         </div>
         {Menu ? <ArrowLeftIcon style={{ fontSize: '20px' }} className='cursor-pointer' /> : ""}
       </div>
       <div className={`p-1 cursor-pointer text-center ${Menu ? 'flex p-3' : 'block'}`}>
-        <div className={` ${Menu ? 'flex w-[350px] ' : 'block'}`}>
+        <div className={` ${Menu ? 'flex w-[300px] ' : 'block'}`}>
           <SettingsIcon style={{ fontSize: '20px' }} />
           <h6 className={`${Menu ? 'ml-3 text-sm' : 'pl-0 text-xs'}  `}>Settings</h6>
         </div>
         {Menu ? <ArrowLeftIcon style={{ fontSize: '20px' }} className='cursor-pointer' /> : ""}
       </div>
       <div className={`p-1 cursor-pointer text-center ${Menu ? 'flex p-3' : 'block'}`}>
-        <div className={` ${Menu ? 'flex w-[350px] ' : 'block'}`}>
+        <div className={` ${Menu ? 'flex w-[300px] ' : 'block'}`}>
           <AlertIcon style={{ fontSize: '20px' }} />
           <h6 className={`${Menu ? 'ml-3 text-sm' : 'pl-0 text-xs'}  `}>Notice Board</h6>
         </div>
         {Menu ? <ArrowLeftIcon style={{ fontSize: '20px' }} className='cursor-pointer' /> : ""}
       </div>
       <div className={`p-1 cursor-pointer text-center ${Menu ? 'flex p-3' : 'block'}`}>
-        <div className={` ${Menu ? 'flex w-[350px] ' : 'block'}`}>
+        <div className={` ${Menu ? 'flex w-[300px] ' : 'block'}`}>
           <AirplaneTicketIcon style={{ fontSize: '20px' }} />
           <h6 className={`${Menu ? 'ml-3 text-sm' : 'pl-0 text-xs'}  `}>Routes</h6>
         </div>
@@ -97,10 +97,10 @@ export default function SideNavbar() {
         </div>
         {Menu ? <ArrowLeftIcon style={{ fontSize: '20px' }} className='cursor-pointer' /> : ""}
       </div>
-      <div className='p-1 text-center mt-2 ml-5  text-gray-300 bg-[#e9efef4a] w-[35px] rounded-[50%] cursor-pointer' onClick={() => dispatch({ type: 'MENU', payload: !Menu })}>
+      <div className='p-1 text-center mt-2   text-gray-300 bg-[#e9efef4a] w-[35px] rounded-[50%] cursor-pointer' onClick={() => dispatch({ type: 'MENU', payload: !Menu })}>
         {Menu ? <ArrowRightIcon style={{ fontSize: '25px' }} /> : <ArrowLeftIcon style={{ fontSize: '25px' }} />
         }
-        {/* <h6 className={`${Menu?'pl-3 text-sm':'pl-0 text-xs'}  `}>DownLoad Excel</h6/> */}
+       
       </div>
     </div>
   )
