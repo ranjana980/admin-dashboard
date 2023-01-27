@@ -11,7 +11,7 @@ import FileDownloadSharpIcon from '@material-ui/icons/GetAppSharp';
 import ArrowLeftIcon from '@material-ui/icons/KeyboardArrowRight';
 import ArrowRightIcon from '@material-ui/icons/KeyboardArrowLeft';
 import { useSelector, useDispatch } from "react-redux";
-import { Link ,useNavigate} from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function SideNavbar() {
   // const [Menu,setMenu]=useState(false)
@@ -26,23 +26,25 @@ export default function SideNavbar() {
         <i className="fa fa-tachometer text-sm text-white" style={{ fontSize: '20px' }} aria-hidden="true"></i>
         <h6 className={`${Menu ? 'ml-3 text-sm' : 'pl-0 text-xs'}  `}>DashBoard</h6>
       </div>
-      <div className={`p-1 cursor-pointer text-center ${Menu ? 'flex p-3' : 'block'}`}>
-        <div className={` ${Menu ? 'flex w-[300px] ' : 'block'}`}>
-          <GroupsIcon style={{ fontSize: '20px' }} />
-          <h6 className={`${Menu ? 'ml-3 text-sm' : 'pl-0 text-xs'}  `}>Members</h6>
-        </div>
+      {/* <div className={`${Menu?'block':'flex'} `}> */}
+        <div className={`p-1 cursor-pointer text-center ${Menu ? 'flex p-3' : 'block'}`}>
+          <div className={` ${Menu ? 'flex w-[300px] ' : 'block'}`}>
+            <GroupsIcon style={{ fontSize: '20px' }} />
+            <h6 className={`${Menu ? 'ml-3 text-sm' : 'pl-0 text-xs'}  `}>Members</h6>
+          </div>
 
-        {Menu ? <ArrowLeftIcon style={{ fontSize: '20px' }} className='' /> : ""}
+          {Menu ? <ArrowLeftIcon style={{ fontSize: '20px' }} className='' /> : ""}
 
-      </div>
-      <div className='bg-white   ml-3 p-2 rounded-[5px]'>
-        <div className='p-[4px] rounded-[5px] hover:bg-gray-100 cursor-pointer' onClick={()=>navigate('/MemberList')}>
-          <p className='p-[4px] text-black leading-[5px]'>Member List</p>
         </div>
-        <div className='p-[4px] rounded-[5px] hover:bg-gray-100 cursor-pointer' onClick={()=>navigate('/AddMember')}>
-           <p className='p-[4px] text-black leading-[5px]' >Add Member</p>
+        <div className='bg-white   ml-3 p-2 rounded-[5px]'>
+          <div className='p-[4px] rounded-[5px] hover:bg-gray-100 cursor-pointer' onClick={() => navigate('/MemberList')}>
+            <p className='p-[4px] text-black leading-[5px]'>Member List</p>
+          </div>
+          <div className='p-[4px] rounded-[5px] hover:bg-gray-100 cursor-pointer' onClick={() => navigate('/AddMember')}>
+            <p className='p-[4px] text-black leading-[5px]' >Add Member</p>
+          </div>
         </div>
-      </div>
+      {/* </div> */}
       <div className={`p-1 cursor-pointer text-center ${Menu ? 'flex p-3' : 'block'}`}>
         <div className={` ${Menu ? 'flex w-[300px] ' : 'block'}`}>
           <AddShoppingCart style={{ fontSize: '20px' }} />
@@ -100,7 +102,7 @@ export default function SideNavbar() {
       <div className='p-1 text-center mt-2   text-gray-300 bg-[#e9efef4a] w-[35px] rounded-[50%] cursor-pointer' onClick={() => dispatch({ type: 'MENU', payload: !Menu })}>
         {Menu ? <ArrowRightIcon style={{ fontSize: '25px' }} /> : <ArrowLeftIcon style={{ fontSize: '25px' }} />
         }
-       
+
       </div>
     </div>
   )
