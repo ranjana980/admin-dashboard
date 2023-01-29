@@ -15,10 +15,9 @@ export default function AddMember() {
           </div>
           <div className={`lg:${Menu ? 'col-span-10' : 'col-span-11'} md:${Menu ? 'col-span-10' : 'col-span-11'} sm:col-span-12 xs:col-span-12 bg-gray-100`}>
             <Navbar />
-            <div className=' p-3 m-2 text-gray-400'>
+            <div className=' p-3 m-2 text-gray-600'>
               <h4>Team Details</h4>
               <div className='bg-white box-shadow-lg rounded-[5px]  '>
-
                 <div className='bg-[#f8f9fc] p-2 border-b-2 border-gray-200 rounded-tl-[5px] rounded-tr-[5px]'>
                   <h6 className='font-bold text-teal-500 '>Add Team Details</h6>
                 </div>
@@ -31,13 +30,13 @@ export default function AddMember() {
                     </div>
                     <div className='col-span-4'>
                       <label>User Name</label>
-                      <div><input type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
+                      <div><input type='text' placeholder='User Name' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
                       </div>
                     </div>
                     <div className='col-span-4'>
                       <label>User Plan</label>
                       <div>
-                        <select type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
+                        <select type='text' placeholder='User Plan' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
                           <option>Select Plan</option>
                           <option>Basic Plan</option>
                           <option>Daimond</option>
@@ -53,7 +52,7 @@ export default function AddMember() {
                     <div className='col-span-4'>
                       <label>User Type</label>
                       <div>
-                        <select type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
+                        <select type='text' placeholder='User Type' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
                           <option>Select User Type</option>
                           <option>Basic Plan</option>
                           <option>Daimond</option>
@@ -67,7 +66,7 @@ export default function AddMember() {
                     <div className='col-span-4'>
                       <label>Team Member</label>
                       <div>
-                        <select type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
+                        <select type='text' placeholder='Team Member' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
                           <option>Select Team Member</option>
                           <option>Basic Plan</option>
                           <option>Daimond</option>
@@ -83,7 +82,6 @@ export default function AddMember() {
                       <div><input type='text' placeholder='Enter Email' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
                       </div>
                     </div>
-
                   </div>
                   <div className='grid grid-cols-12'>
                     <div className='col-span-4'>
@@ -122,7 +120,7 @@ export default function AddMember() {
                   <div className='grid grid-cols-12'>
                     <div className='col-span-4'>
                       <label>Amount Balance</label>
-                      <div><input type='text'  disabled={true} placeholder='Amount Balance' className='border-gray-700 w-[90%] border rounded-[5px] p-2' />
+                      <div><input type='text' disabled={true} placeholder='Amount Balance' className='border-gray-700 w-[90%] border rounded-[5px] p-2 bg-gray-200' />
                       </div>
                     </div>
                     <div className='col-span-4'>
@@ -132,151 +130,143 @@ export default function AddMember() {
                     </div>
                     <div className='col-span-4'>
                       <label>Credit Amount</label>
-                      <div><input type='text' placeholder='Credit Amount' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
+                      <div><input type='text' placeholder='Credit Amount' className='border-gray-700  w-[90%] border rounded-[5px] p-2 bg-gray-200' />
                       </div>
                     </div>
-                    
                   </div>
                   <div className='grid grid-cols-12'>
                     <div className='col-span-4'>
-                      <label>Name of Client</label>
-                      <div><input type='text' placeholder='Name of Client' className='border-gray-700 w-[90%] border rounded-[5px] p-2' />
+                      <label>Credit Limit</label>
+                      <div><input type='text' placeholder='Credit Limit' className='border-gray-700 w-[90%] border rounded-[5px] p-2' />
                       </div>
                     </div>
                     <div className='col-span-4'>
-                      <label>User Name</label>
-                      <div><input type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
+                      <label>DOB</label>
+                      <div><input type='date' placeholder='DOB' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
                       </div>
                     </div>
                     <div className='col-span-4'>
-                      <label>User Plan</label>
+                      <label>Company Name</label>
+                      <div><input type='text' placeholder='Company Name' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
+                      </div>
+                    </div>
+                  </div>
+                  <div className='grid grid-cols-12'>
+                    <div className='col-span-4'>
+                      <label>Company Type</label>
+                      <div><input type='text' placeholder='Company Type' className='border-gray-700 w-[90%] border rounded-[5px] p-2' />
+                      </div>
+                    </div>
+                    <div className='col-span-4'>
+                      <label>Kyc Verified</label>
+                      <div><input type='text' placeholder='Not Verified' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
+                      </div>
+                    </div>
+                    <div className='col-span-4'>
+                      <label>GST</label>
+                      <div><input type='Text' placeholder='GST Number' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
+                      </div>
+                    </div>
+                  </div>
+                  <div className='grid grid-cols-12'>
+                    <div className='col-span-4'>
+                      <label>Pancard</label>
+                      <div><input type='text' placeholder='Pancard' className='border-gray-700 w-[90%] border rounded-[5px] p-2' />
+                      </div>
+                    </div>
+                    <div className='col-span-4'>
+                      <label>Aadhar Card</label>
+                      <div><input type='text' placeholder='Aadhar Card' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
+                      </div>
+                    </div>
+                    <div className='col-span-4'>
+                      <label>Mobile Verified</label>
                       <div>
                         <select type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
-                          <option>Select Plan</option>
-                          <option>Basic Plan</option>
-                          <option>Daimond</option>
-                          <option>Dikshu India Plan</option>
-                          <option>Platinaum</option>
-                          <option>Gold</option>
-                          <option>Silver</option>
+                          <option>Select </option>
+                          <option>Yes</option>
+                          <option>No</option>
                         </select>
                       </div>
                     </div>
                   </div>
                   <div className='grid grid-cols-12'>
                     <div className='col-span-4'>
-                      <label>Name of Client</label>
-                      <div><input type='text' placeholder='Name of Client' className='border-gray-700 w-[90%] border rounded-[5px] p-2' />
-                      </div>
-                    </div>
-                    <div className='col-span-4'>
-                      <label>User Name</label>
-                      <div><input type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
-                      </div>
-                    </div>
-                    <div className='col-span-4'>
-                      <label>User Plan</label>
+                      <label>Email Verified</label>
                       <div>
-                        <select type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
-                          <option>Select Plan</option>
-                          <option>Basic Plan</option>
-                          <option>Daimond</option>
-                          <option>Dikshu India Plan</option>
-                          <option>Platinaum</option>
-                          <option>Gold</option>
-                          <option>Silver</option>
+                        <select type='text' placeholder='Email Verified' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
+                          <option>Select </option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div className='col-span-4'>
+                      <label>Approved By</label>
+                      <div>
+                        <select type='text' placeholder='Approved By' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
+                          <option>Select </option>
+                          <option>Approve Now</option>
+                          <option>Not yet</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div className='col-span-4'>
+                      <label>Route</label>
+                      <div>
+                        <select type='text' placeholder='Route' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
+                          <option>Select </option>
+                          <option>Yes</option>
+                          <option>No</option>
                         </select>
                       </div>
                     </div>
                   </div>
                   <div className='grid grid-cols-12'>
                     <div className='col-span-4'>
-                      <label>Name of Client</label>
-                      <div><input type='text' placeholder='Name of Client' className='border-gray-700 w-[90%] border rounded-[5px] p-2' />
+                      <label>Force Logout</label>
+                      <div><input type='text' placeholder='Force Logout From All Devices' className='border-gray-700 w-[90%] bg-teal-400 border rounded-[5px] p-2 placeholder:text-center placeholder:text-white' />
                       </div>
                     </div>
                     <div className='col-span-4'>
-                      <label>User Name</label>
-                      <div><input type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
-                      </div>
-                    </div>
-                    <div className='col-span-4'>
-                      <label>User Plan</label>
+                      <label>Status</label>
                       <div>
-                        <select type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
-                          <option>Select Plan</option>
-                          <option>Basic Plan</option>
-                          <option>Daimond</option>
-                          <option>Dikshu India Plan</option>
-                          <option>Platinaum</option>
-                          <option>Gold</option>
-                          <option>Silver</option>
+                        <select type='text' placeholder='Status' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
+                          <option>Select </option>
+                          <option>Active</option>
+                          <option>Blocked</option>
                         </select>
                       </div>
+                    </div>
+                    <div className='col-span-4'>
                     </div>
                   </div>
                   <div className='grid grid-cols-12'>
                     <div className='col-span-4'>
-                      <label>Name of Client</label>
-                      <div><input type='text' placeholder='Name of Client' className='border-gray-700 w-[90%] border rounded-[5px] p-2' />
+                    </div>
+                    <div className='col-span-4'>
+                      <label>UUID</label>
+                      <div><input type='text' placeholder='UUID of Device' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
                       </div>
                     </div>
                     <div className='col-span-4'>
-                      <label>User Name</label>
-                      <div><input type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
-                      </div>
-                    </div>
-                    <div className='col-span-4'>
-                      <label>User Plan</label>
-                      <div>
-                        <select type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
-                          <option>Select Plan</option>
-                          <option>Basic Plan</option>
-                          <option>Daimond</option>
-                          <option>Dikshu India Plan</option>
-                          <option>Platinaum</option>
-                          <option>Gold</option>
-                          <option>Silver</option>
-                        </select>
+                      <label>Prpfile Pic</label>
+                      <div><input type='file' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
                       </div>
                     </div>
                   </div>
                   <div className='grid grid-cols-12'>
-                    <div className='col-span-4'>
-                      <label>Name of Client</label>
-                      <div><input type='text' placeholder='Name of Client' className='border-gray-700 w-[90%] border rounded-[5px] p-2' />
-                      </div>
-                    </div>
-                    <div className='col-span-4'>
-                      <label>User Name</label>
-                      <div><input type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
-                      </div>
-                    </div>
-                    <div className='col-span-4'>
-                      <label>User Plan</label>
-                      <div>
-                        <select type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
-                          <option>Select Plan</option>
-                          <option>Basic Plan</option>
-                          <option>Daimond</option>
-                          <option>Dikshu India Plan</option>
-                          <option>Platinaum</option>
-                          <option>Gold</option>
-                          <option>Silver</option>
-                        </select>
-                      </div>
+                    <div className='col-span-4 flex gap-[5px]'>
+                      <button className='text-white p-2 bg-teal-400 rounded-[5px]'>Save</button>
+                      <button className='text-white p-2 bg-gray-400 rounded-[5px]'>Cancel</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
   )
 }

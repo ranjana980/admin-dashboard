@@ -24,10 +24,9 @@ export default function MemberList() {
           </div>
           <div className={`lg:${Menu ? 'col-span-10' : 'col-span-11'} md:${Menu ? 'col-span-10' : 'col-span-11'} sm:col-span-12 xs:col-span-12 bg-gray-100`}>
             <Navbar />
-            <div className=' p-3 m-2 text-gray-400'>
+            <div className=' p-3 m-2 text-gray-600'>
               <h4>Clients</h4>
               <div className='bg-white box-shadow-lg rounded-[5px]  '>
-
                 <div className='bg-[#f8f9fc] p-2 border-b-2 border-gray-200 rounded-tl-[5px] rounded-tr-[5px]'>
                   <h6 className='font-bold text-teal-500 '>List of Members</h6>
                 </div>
@@ -65,7 +64,7 @@ export default function MemberList() {
                         </td>
                       </tr>
                       <tr className='text-gray-400'>
-                        <td className='border-2 border-gray-200'>1</td>
+                        <td className='border-2 border-gray-200'>2</td>
                         <td className='border-2 border-gray-200'>
                           <div>PPA003 </div>
                           <div>8700254114</div>
@@ -83,7 +82,7 @@ export default function MemberList() {
                         </td>
                       </tr>
                       <tr className='text-gray-400'>
-                        <td className='border-2 border-gray-200'>1</td>
+                        <td className='border-2 border-gray-200'>3</td>
                         <td className='border-2 border-gray-200'>
                           <div>PPA003 </div>
                           <div>8700254114</div>
@@ -101,7 +100,7 @@ export default function MemberList() {
                         </td>
                       </tr>
                       <tr className='text-gray-400'>
-                        <td className='border-2 border-gray-200'>1</td>
+                        <td className='border-2 border-gray-200'>4</td>
                         <td className='border-2 border-gray-200'>
                           <div>PPA003 </div>
                           <div>8700254114</div>

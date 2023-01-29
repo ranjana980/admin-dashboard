@@ -29,6 +29,14 @@ export default function LoginPage() {
 
     }
 
+    const handleGuestLogin=()=>{
+            localStorage.setItem('LoginStatus', 'Login')
+            navigate('/DefaultLayout')
+            swal('Login SuccessFully')
+        
+       
+    }
+
     var initVal = {
         email: "",
         password: ""
@@ -80,6 +88,9 @@ export default function LoginPage() {
                                         </div>
                                     </div>
                                     <Link to='/'><h6 className='text-teal-500 mt-3 text-center   text-sm'>Forgot Password?</h6></Link>
+                                   
+                                        <u className='text-teal-500 mt-3 text-center cursor-pointer  text-sm' onClick={handleGuestLogin}><h6 >Login As A Guest</h6></u>
+
                                 </div>
                             </div>
                         </div>
