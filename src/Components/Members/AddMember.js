@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Table } from 'reactstrap'
 export default function AddMember() {
   const FormData = useSelector((state) => state.FormDataReducer);
-  const { Menu } = FormData
+  const { Menu,isMobile } = FormData
   return (
     <div>
       <div>

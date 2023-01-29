@@ -14,7 +14,7 @@ import  DataUsage  from '@material-ui/icons/DataUsage';
 
 export default function MemberList() {
   const FormData = useSelector((state) => state.FormDataReducer);
-  const { Menu } = FormData
+  const { Menu,isMobile } = FormData
   return (
     <div>
       <div>
