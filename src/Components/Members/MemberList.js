@@ -19,10 +19,10 @@ export default function MemberList() {
     <div>
       <div>
         <div className='grid grid-cols-12'>
-          <div className={`lg:${Menu ? 'col-start-1 col-span-2' : 'col-span-1'} md:${Menu ? 'col-start-1 col-span-2' : 'col-span-1'} sm:col-span-0 xs:col-span-0 sm:hidden xs:hidden md:block lg:block`}>
+          <div className={`${Menu ? 'lg:col-span-2' : 'lg:col-span-1'} ${Menu ? 'md:col-span-2' : 'md:col-span-1'} ${Menu ? 'xl:col-span-2' : 'xl:col-span-1'}  ${isMobile ? 'sm:block sm:col-span-2' : 'sm:hidden sm:col-span-0'} ${isMobile ? 'xs:block xs:col-span-2' : 'xs:hidden xs:col-span-0'} md:block lg:block xl:block`}>
             <SideNavbar />
           </div>
-          <div className={`lg:${Menu ? 'col-span-10' : 'col-span-11'} md:${Menu ? 'col-span-10' : 'col-span-11'} sm:col-span-12 xs:col-span-12 bg-gray-100`}>
+          <div className={`${Menu ? 'lg:col-span-10' : 'lg:col-span-11'} ${Menu ? 'md:col-span-10' : 'md:col-span-11'} ${Menu ? 'xl:col-span-10' : 'xl:col-span-11'} ${isMobile ? ' sm:col-span-10' : ' sm:col-span-12'} ${isMobile ? ' xs:col-span-10' : ' xs:col-span-12'} bg-gray-100`}>
             <Navbar />
             <div className=' p-3 m-2 text-gray-600'>
               <h4>Clients</h4>
@@ -122,13 +122,9 @@ export default function MemberList() {
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
   )
 }

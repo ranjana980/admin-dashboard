@@ -46,14 +46,12 @@ export default function ApiHistory() {
                   <label>From</label>
                   <div>
                     <input type='date' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
-
                   </div>
                 </div>
                 <div className='col-span-3'>
                   <label>To</label>
                   <div>
                     <input type='date' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
-
                   </div>
                 </div>
               </div>
@@ -62,14 +60,12 @@ export default function ApiHistory() {
                 <button className='text-white p-2 bg-gray-400 rounded-[5px]'>Cancel</button>
               </div>
             </div>
-
           </div>
           <div className='bg-white box-shadow-lg rounded-[5px] mt-5'>
             <div className='bg-[#f8f9fc] p-2 border-b-2 border-gray-200 rounded-tl-[5px] rounded-tr-[5px]'>
               <h6 className='ml-2 font-bold text-teal-400 '>List</h6>
             </div>
             <div className='p-4'>
-
               <Table responsive >
                 <thead >
                   <tr className='text-gray-400'>
@@ -84,7 +80,6 @@ export default function ApiHistory() {
                 <tbody>
                   <tr className='text-gray-400 bg-gray-100'>
                     <td className='border-2 border-gray-200'>1</td>
-                    
                     <td className='border-2 border-gray-200'>
                       Plan Api
                     </td>
@@ -95,7 +90,6 @@ export default function ApiHistory() {
                   </tr>
                   <tr className='text-gray-400'>
                     <td className='border-2 border-gray-200'>2</td>
-                    
                     <td className='border-2 border-gray-200'>
                       Plan Api
                     </td>
@@ -103,11 +97,9 @@ export default function ApiHistory() {
                     <td className='border-2 border-gray-200'>500</td>
                     <td className='border-2 border-gray-200 '>400 Success</td>
                     <td className='border-2 border-gray-200'>600</td>
-
                   </tr>
                   <tr className='text-gray-400'>
                     <td className='border-2 border-gray-200'>3</td>
-                    
                     <td className='border-2 border-gray-200'>
                       Plan Api
                     </td>
@@ -115,11 +107,9 @@ export default function ApiHistory() {
                     <td className='border-2 border-gray-200'>500</td>
                     <td className='border-2 border-gray-200 '>400 Success</td>
                     <td className='border-2 border-gray-200'>600</td>
-
                   </tr>
                   <tr className='text-gray-400'>
                     <td className='border-2 border-gray-200'>4</td>
-                    
                     <td className='border-2 border-gray-200'>
                       Plan Api
                     </td>

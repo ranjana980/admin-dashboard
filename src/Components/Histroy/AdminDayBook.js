@@ -93,7 +93,6 @@ export default function AdminDayBook() {
                 <tbody>
                   <tr className='text-gray-400 bg-gray-100'>
                     <td className='border-2 border-gray-200'>1</td>
-
                     <td className='border-2 border-gray-200'>
                       Plan Api
                     </td>
@@ -104,7 +103,6 @@ export default function AdminDayBook() {
                   </tr>
                   <tr className='text-gray-400'>
                     <td className='border-2 border-gray-200'>2</td>
-
                     <td className='border-2 border-gray-200'>
                       Plan Api
                     </td>
@@ -112,7 +110,6 @@ export default function AdminDayBook() {
                     <td className='border-2 border-gray-200'>500</td>
                     <td className='border-2 border-gray-200 '>400 Success</td>
                     <td className='border-2 border-gray-200'>600</td>
-
                   </tr>
                   <tr className='text-gray-400'>
                     <td className='border-2 border-gray-200'>3</td>
