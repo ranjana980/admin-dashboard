@@ -279,7 +279,8 @@ export default function SideNavbar() {
         </div>
 
       </div> : ""}
-      {!isMobile ? <div className='p-1 text-center mt-2   text-gray-300 bg-[#e9efef4a] w-[35px] rounded-[50%] cursor-pointer' onClick={() => dispatch({ type: 'MENU', payload: !Menu })}>
+      {!isMobile ?
+       <div className='p-1 text-center mt-2  flex justify-center  text-gray-300 bg-[#e9efef4a] w-[35px] rounded-[50%] cursor-pointer' onClick={() => dispatch({ type: 'MENU', payload: !Menu })}>
         {Menu ? <ArrowRightIcon style={{ fontSize: '25px' }} /> : <ArrowLeftIcon style={{ fontSize: '25px' }} />
         }
       </div> : ""}

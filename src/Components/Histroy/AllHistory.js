@@ -22,7 +22,7 @@ export default function AllHistory() {
             </div>
             <div className='p-4'>
               <div className='grid grid-cols-12'>
-                <div className='col-span-3'>
+                <div className='xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-12 xs:col-span-12'>
                   <label>Service</label>
                   <div>
                     <select type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
@@ -32,7 +32,7 @@ export default function AllHistory() {
                     </select>
                   </div>
                 </div>
-                <div className='col-span-3'>
+                <div className='xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-12 xs:col-span-12'>
                   <label>Provider</label>
                   <div>
                     <select type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
@@ -42,7 +42,7 @@ export default function AllHistory() {
                     </select>
                   </div>
                 </div>
-                <div className='col-span-3'>
+                <div className='xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-12 xs:col-span-12'>
                   <label>Transaction Type</label>
                   <div>
                     <select type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
@@ -52,7 +52,7 @@ export default function AllHistory() {
                     </select>
                   </div>
                 </div>
-                <div className='col-span-3'>
+                <div className='xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-12 xs:col-span-12'>
                   <label>Status</label>
                   <div>
                     <select type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
@@ -64,25 +64,25 @@ export default function AllHistory() {
                 </div>
               </div>
               <div className='grid grid-cols-12'>
-                <div className='col-span-3'>
+                <div className='xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-12 xs:col-span-12'>
                   <label>From</label>
                   <div>
                     <input type='date' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
                   </div>
                 </div>
-                <div className='col-span-3'>
+                <div className='xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-12 xs:col-span-12'>
                   <label>To</label>
                   <div>
                     <input type='date' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
                   </div>
                 </div>
-                <div className='col-span-3'>
+                <div className='xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-12 xs:col-span-12'>
                   <label>Mobile / DTH / Ref Number</label>
                   <div>
                     <input type='text' placeholder='Mobile / DTH / Ref Number' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
                   </div>
                 </div>
-                <div className='col-span-3'>
+                <div className='xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-12 xs:col-span-12'>
                   <label></label>
                   <div>
                     <input type='text' placeholder='Search Records' className='border-gray-700 w-[90%] bg-teal-400 border rounded-[5px] p-2 placeholder:text-center placeholder:text-white' />

@@ -22,7 +22,7 @@ export default function ApiHistory() {
             </div>
             <div className='p-4'>
               <div className='grid grid-cols-12'>
-                <div className='col-span-3'>
+                <div className='xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-12 xs:col-span-12'>
                   <label>Api Name</label>
                   <div>
                     <select type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
@@ -32,7 +32,7 @@ export default function ApiHistory() {
                     </select>
                   </div>
                 </div>
-                <div className='col-span-3'>
+                <div className='xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-12 xs:col-span-12'>
                   <label>Status</label>
                   <div>
                     <select type='text' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' >
@@ -42,13 +42,13 @@ export default function ApiHistory() {
                     </select>
                   </div>
                 </div>
-                <div className='col-span-3'>
+                <div className='xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-12 xs:col-span-12'>
                   <label>From</label>
                   <div>
                     <input type='date' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
                   </div>
                 </div>
-                <div className='col-span-3'>
+                <div className='xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-12 xs:col-span-12'>
                   <label>To</label>
                   <div>
                     <input type='date' placeholder='Name of Client' className='border-gray-700  w-[90%] border rounded-[5px] p-2' />
