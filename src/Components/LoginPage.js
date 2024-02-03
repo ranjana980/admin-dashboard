@@ -34,8 +34,8 @@ export default function LoginPage() {
 
   return (
     <div className="flex justify-center align-item-center h-[100vh]">
-      <div className="mt-[100px] mb-[130px] grid lg:grid-cols-12 xs:grid-cols-12 md:grid-cols-12  bg-white  rounded-[5px]">
-        <div className="lg:col-span-6 mt-4 mb-4  p-5  xs:none lg:block login-bg bg-center border-r-solid border-r-2 border-r-gray-300">
+      <div className="mt-[100px] mb-[130px] grid md:grid-cols-12 lg:grid-cols-12 xs:grid-cols-12 md:grid-cols-12  bg-white  rounded-[5px]">
+        <div className="md:hidden  md:col-span-6 lg:col-span-6 mt-4 mb-4  p-5  xs:hidden  lg:block login-bg bg-center border-r-solid border-r-2 border-r-gray-300">
           <img src={logo} className="mt-3" alt="logo" height={410} width={410} />
         </div>
         <div className="lg:col-span-6 md:col-span-12  xs:col-span-12 sm:col-span-12 p-5">
