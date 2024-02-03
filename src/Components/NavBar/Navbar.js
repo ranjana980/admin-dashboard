@@ -1,33 +1,33 @@
 import React, { useState } from 'react'
-import AlertIcon from '@material-ui/icons/Notifications';
-import EmailIcon from '@material-ui/icons/Email'
-import { Link, useNavigate } from 'react-router-dom'
+import { Notifications, Email, Menu } from '@material-ui/icons';
+import { useNavigate } from 'react-router-dom'
 import swal from 'sweetalert';
-import MenuIcon from '@material-ui/icons/Menu';
 import { useSelector, useDispatch } from "react-redux";
+import logo from "../../assests/images/admin.png";
+
 export default function Navbar() {
   const navigate = useNavigate()
   const [Open, setOpen] = useState(false)
-  const FormData = useSelector((state) => state.FormDataReducer);
-  const { isMobile } = FormData
+  const { FormDataReducer } = useSelector((state) => state);
+  const { isMobile } = FormDataReducer
   const dispatch = useDispatch()
+
   return (
     <>
       <div className='bg-white drop-shadow-lg h-[60px]'>
         <div className='flex justify-between pl-5 pr-5'>
-          <div className='mt-3 text-teal-500 lg:hidden xl:hidden md:hidden sm:block xs:block' onClick={()=>{dispatch({type:'MOBILE',payload:!isMobile})}}>
-            <MenuIcon />
+          <div className='mt-3 text-teal-500 lg:hidden xl:hidden md:hidden sm:block xs:block' onClick={() => { dispatch({ type: 'MOBILE', payload: !isMobile }) }}>
+            <Menu />
           </div>
-
           <div>
-            <img src='https://suvidhacsp.com/img/logo_new.jpg' className='w-[150px] ' />
+            <img src={logo} height={50} width={50} className='rounded-full mt-2' />
           </div>
           <div className='flex p-2'>
             <div className=' flex border-r-2 border-gray-400 mt-2 h-[30px] mr-5'>
-              <AlertIcon className='text-gray-300 mr-10' />
-              <EmailIcon className='text-gray-300 mr-10' />
+              <Notifications className='text-gray-300 mr-10' />
+              <Email className='text-gray-300 mr-10' />
             </div>
-            <img src='https://suvidhacsp.com/profile_picture/1.png' className='w-[50px] p-2  cursor-pointer' onClick={() => setOpen(!Open)} />
+            <img src={logo} height={50} width={50} className='rounded-full p-2  cursor-pointer' onClick={() => setOpen(!Open)} />
           </div>
         </div>
       </div>

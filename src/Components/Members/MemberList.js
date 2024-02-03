@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../NavBar/Navbar'
 import SideNavbar from '../NavBar/SideNavbar'
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Table } from 'reactstrap'
 import GroupsIcon from '@material-ui/icons/Group';
 import  BorderColorSharp  from '@material-ui/icons/BorderColorSharp';
@@ -13,8 +13,9 @@ import  DataUsage  from '@material-ui/icons/DataUsage';
 
 
 export default function MemberList() {
-  const FormData = useSelector((state) => state.FormDataReducer);
-  const { Menu,isMobile } = FormData
+  const {FormDataReducer} = useSelector((state) => state);
+  const { Menu,isMobile } = FormDataReducer
+
   return (
     <div>
       <div>
@@ -35,7 +36,7 @@ export default function MemberList() {
                     <thead >
                       <tr className='text-gray-400'>
                         <th className='border-2 border-gray-200 bg-gray-100'>S No.</th>
-                        <th className='border-2 border-gray-200 bg-gray-100'>Username</th>
+                        <th className='border-2 border-gray-200 bg-gray-100'>User</th>
                         <th className='border-2 border-gray-200 bg-gray-100'>Balance</th>
                         <th className='border-2 border-gray-200 bg-gray-100'>Credit</th>
                         <th className='border-2 border-gray-200 bg-gray-100'>Limit</th>

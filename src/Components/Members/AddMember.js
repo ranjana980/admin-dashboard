@@ -1,11 +1,12 @@
 import React from 'react'
 import Navbar from '../NavBar/Navbar'
 import SideNavbar from '../NavBar/SideNavbar'
-import { useSelector, useDispatch } from "react-redux";
-import { Table } from 'reactstrap'
+import { useSelector } from "react-redux";
+
 export default function AddMember() {
-  const FormData = useSelector((state) => state.FormDataReducer);
-  const { Menu,isMobile } = FormData
+  const {FormDataReducer} = useSelector((state) => state);
+  const { Menu,isMobile } = FormDataReducer
+  
   return (
     <div>
       <div>
