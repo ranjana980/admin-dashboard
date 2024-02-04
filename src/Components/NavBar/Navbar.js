@@ -16,7 +16,8 @@ export default function Navbar() {
     <>
       <div className='bg-white drop-shadow-lg h-[60px]'>
         <div className='flex justify-between pl-5 pr-5'>
-          <div className='mt-3 text-teal-500 lg:hidden xl:hidden md:hidden sm:block xs:block' onClick={() => { dispatch({ type: 'MOBILE', payload: !isMobile }) }}>
+          <div className='mt-3 text-teal-500 lg:hidden xl:hidden md:block sm:block xs:block' onClick={() => 
+            { dispatch({ type: 'MOBILE', payload: !isMobile }) }}>
             <Menu />
           </div>
           <div>

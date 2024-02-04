@@ -1,12 +1,11 @@
 import React from 'react'
-
 import MyTableComponent from '../common-component/table-component'
 import { cardData, turnoverColumns, turnoverData } from '../constants/table-contstant'
 import IconRenderer from '../utils/Icons'
 
 export default function DashBoard() {
   return (
-    <div className='bg-gray-100 p-3'>
+    <div className='bg-gray-100 p-3 h-[100vh] overflow-scroll'>
       <div className='grid grid-cols-12 '>
         <div className='xl:col-span-6 lg:col-span-6 md:col-span-6 sm:col-span-12 xs:col-span-12'>
           <h1 className='text-xl'>Reports (Today i.e. 2023-01-23)</h1>

@@ -26,7 +26,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route index path='/' element={<LoginPage />} />
-            <Route path={'/DefaultLayout'} element={<DefaultLayout />} />
+            <Route path={'/Dashboard'} element={<DefaultLayout />} />
             <Route path='/MemberList' element={<MemberList/>}/>
             <Route path='/AddMember' element={<AddMember/>} />
             <Route path='/AllHistory' element={<AllHistory/>}/>
