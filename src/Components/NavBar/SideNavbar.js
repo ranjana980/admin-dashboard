@@ -17,7 +17,7 @@ export default function SideNavbar() {
   const dispatch = useDispatch();
 
   return (
-    <div className={`text-white   ${Menu ? "w-[240px]" : "w-[90px]"} `}>
+    <div className={`text-white   ${Menu ? "w-[240px]" : isMobile? "w-[130px]":"w-[90px]"} `}>
       <div
         className={`mt-4 overflow-y-scroll side-navbar ${
           Menu ? "h-[460px]" : "h-[510px]"
