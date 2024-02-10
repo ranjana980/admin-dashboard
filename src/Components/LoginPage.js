@@ -10,7 +10,7 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (localStorage.getItem("LoginStatus") == "Login") {
-      navigate("/DefaultLayout");
+      navigate("/dashboard");
     } else {
       navigate("/");
     }
@@ -19,7 +19,7 @@ export default function LoginPage() {
   const handleSubmit = (values) => {
     if (values.email == "admin@gmail.com" && values.password == "admin@123") {
       localStorage.setItem("LoginStatus", "Login");
-      navigate("/DashBoard");
+      navigate("/dashboard");
       swal("Login SuccessFully");
     } else {
       swal("Invalid User Login");
@@ -28,7 +28,7 @@ export default function LoginPage() {
 
   const handleGuestLogin = () => {
     localStorage.setItem("LoginStatus", "Login");
-    navigate("/DashBoard");
+    navigate("/dashboard");
     swal("Login SuccessFully");
   };
 

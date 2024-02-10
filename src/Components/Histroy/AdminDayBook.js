@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../NavBar/Navbar'
 import SideNavbar from '../NavBar/SideNavbar'
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Table } from 'reactstrap'
 
 export default function AdminDayBook() {

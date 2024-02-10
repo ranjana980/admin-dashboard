@@ -1,12 +1,12 @@
 import React from 'react'
 import { Table } from 'reactstrap'
 
-export default function MyTableComponent({ columns, data,thStyle  }) {
+export default function MyTableComponent({ columns, data, thStyle, trStyle }) {
     return (
         <div>
             <Table responsive >
                 <thead className={thStyle} >
-                    <tr >
+                    <tr className={trStyle}>
                         {columns.map((column) => (
                             <th className={`border-2 border-gray-200 ${column.style}`} key={column.key}>{column.heading}</th>
                         ))}
@@ -14,7 +14,7 @@ export default function MyTableComponent({ columns, data,thStyle  }) {
                 </thead>
                 <tbody>
                     {data.map((row, rowIndex) => (
-                        <tr key={rowIndex}>
+                        <tr key={rowIndex} className={trStyle}>
                             {columns.map((column) => (
                                 <td className='border-2 border-gray-200' key={column.key}>{row[column.key]}</td>
                             ))}

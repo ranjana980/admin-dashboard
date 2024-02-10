@@ -21,7 +21,7 @@ export default function Navbar() {
             <Menu />
           </div>
           <div>
-            <img src={logo} height={50} width={50} className='rounded-full mt-2' />
+            <img src={logo} height={50} width={50} className='rounded-full mt-2 hidden lg:block xl:block' />
           </div>
           <div className='flex p-2'>
             <div className=' flex border-r-2 border-gray-400 mt-2 h-[30px] mr-5'>

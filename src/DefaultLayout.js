@@ -14,7 +14,7 @@ export default function DefaultLayout() {
 
     useEffect(() => {
         if ((localStorage.getItem('LoginStatus') == 'Login')) {
-            navigate('/Dashboard')
+            navigate('/dashboard')
         }
         else {
             navigate('/')

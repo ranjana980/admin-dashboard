@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import { KeyboardArrowRight, KeyboardArrowLeft } from "@material-ui/icons";
+import {
+  KeyboardArrowRight,
+  KeyboardArrowLeft,
+  KeyboardArrowDown,
+} from "@material-ui/icons";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import KeyboardArrowDown from "@material-ui/icons/KeyboardArrowDown";
 import { navBarItems } from "../../constants/table-contstant";
 import IconRenderer from "../../utils/Icons";
 
@@ -15,12 +18,17 @@ export default function SideNavbar() {
 
   return (
     <div className={`text-white   ${Menu ? "w-[240px]" : "w-[90px]"} `}>
-      <div className={`mt-4 overflow-y-scroll side-navbar ${Menu ? "h-[460px]" : "h-[510px]"}`}>
+      <div
+        className={`mt-4 overflow-y-scroll side-navbar ${
+          Menu ? "h-[460px]" : "h-[510px]"
+        }`}
+      >
         {navBarItems.map((item, index) => (
           <React.Fragment key={`${item.label}-${index}`}>
             <div
-              className={`justify-between cursor-pointer text-center ${item.border ? " border-b  solid border-teal-200" : ""
-                } ${Menu ? 'p-2 flex' : 'block'} `}
+              className={`justify-between cursor-pointer text-center ${
+                item.border ? " border-b  solid border-teal-200" : ""
+              } ${Menu ? "p-2 flex" : "block"} `}
               onClick={() => {
                 if (item.route) navigate(item.route);
                 else setId(id !== item.label ? item.label : "");
@@ -45,7 +53,10 @@ export default function SideNavbar() {
                 (id == item.label ? (
                   <KeyboardArrowDown style={{ fontSize: "20px" }} />
                 ) : (
-                  <KeyboardArrowRight style={{ fontSize: "20px" }} className="" />
+                  <KeyboardArrowRight
+                    style={{ fontSize: "20px" }}
+                    className=""
+                  />
                 ))}
             </div>
             {item.subnavMenu.length > 1 && id === item.label && (

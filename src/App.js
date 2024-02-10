@@ -1,7 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 import LoginPage from './Components/LoginPage';
 import DefaultLayout from './DefaultLayout';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,8 +15,6 @@ import AdminDayBook from './Components/Histroy/AdminDayBook';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 function App() {
-  const [path, setPath] = useState('/Login')
-  const [element, setElement] = useState(<LoginPage />)
 
   return (
     <div className="">
@@ -26,12 +22,12 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route index path='/' element={<LoginPage />} />
-            <Route path={'/Dashboard'} element={<DefaultLayout />} />
-            <Route path='/MemberList' element={<MemberList/>}/>
-            <Route path='/AddMember' element={<AddMember/>} />
-            <Route path='/AllHistory' element={<AllHistory/>}/>
-            <Route path='/ApiHistory' element={<ApiHistory/>}/>
-            <Route path='/AdminDayBook' element={<AdminDayBook/>}/>
+            <Route path={'/dashboard'} element={<DefaultLayout />} />
+            <Route path='/member-list' element={<MemberList/>}/>
+            <Route path='/add-member' element={<AddMember/>} />
+            <Route path='/all-history' element={<AllHistory/>}/>
+            <Route path='/api-history' element={<ApiHistory/>}/>
+            <Route path='/admin-day-book' element={<AdminDayBook/>}/>
           </Routes>
         </BrowserRouter>
       </Provider>
