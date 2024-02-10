@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../NavBar/Navbar";
 import SideNavbar from "../NavBar/SideNavbar";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   BorderColorSharp,
   RecentActors,
@@ -13,6 +13,7 @@ import {
 } from "@material-ui/icons";
 import { memberListColumns, memberListData } from "../../constants/table-contstant";
 import MyTableComponent from "../../common-component/table-component";
+import { Drawer } from "@material-ui/core";
 
 const TableAction = () => {
   return <>
@@ -54,6 +55,7 @@ export default function MemberList() {
   const { FormDataReducer } = useSelector((state) => state);
   const { Menu, isMobile } = FormDataReducer;
   const [tableData, setTableData] = useState(memberListData)
+  const dispatch =useDispatch()
 
   useEffect(() => {
     setTableData(memberListData.map((item) => {
@@ -76,7 +78,9 @@ export default function MemberList() {
           } ${isMobile ? "xs:block xs:col-span-2" : "xs:hidden xs:col-span-0"
           } md:block lg:block xl:block`}
       >
-        <SideNavbar />
+       {isMobile ? <Drawer open={isMobile} anchor='left' onClose={() => { dispatch({ type: 'MOBILE', payload: !isMobile }) }}>
+          <SideNavbar />
+        </Drawer> : <SideNavbar />}
       </div>
       <div
         className={`${Menu ? "lg:col-span-10" : "lg:col-span-11"} ${Menu ? "md:col-span-10" : "md:col-span-11"

@@ -1,16 +1,20 @@
 import React from 'react'
 import Navbar from '../NavBar/Navbar'
 import SideNavbar from '../NavBar/SideNavbar'
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Table } from 'reactstrap'
+import { Drawer } from '@material-ui/core';
 
 export default function AdminDayBook() {
   const FormData = useSelector((state) => state.FormDataReducer);
   const { Menu, isMobile } = FormData
+  const dispatch = useDispatch()
   return (
     <div className='grid grid-cols-12'>
       <div className={`${Menu ? 'lg:col-span-2' : 'lg:col-span-1'} ${Menu ? 'md:col-span-2' : 'md:col-span-1'} ${Menu ? 'xl:col-span-2' : 'xl:col-span-1'}  ${isMobile ? 'sm:block sm:col-span-2' : 'sm:hidden sm:col-span-0'} ${isMobile ? 'xs:block xs:col-span-2' : 'xs:hidden xs:col-span-0'} md:block lg:block xl:block`}>
-        <SideNavbar />
+        {isMobile ? <Drawer open={isMobile} anchor='left' onClose={() => { dispatch({ type: 'MOBILE', payload: !isMobile }) }}>
+          <SideNavbar />
+        </Drawer> : <SideNavbar />}
       </div>
       <div className={`${Menu ? 'lg:col-span-10' : 'lg:col-span-11'} ${Menu ? 'md:col-span-10' : 'md:col-span-11'} ${Menu ? 'xl:col-span-10' : 'xl:col-span-11'} ${isMobile ? ' sm:col-span-10' : ' sm:col-span-12'} ${isMobile ? ' xs:col-span-10' : ' xs:col-span-12'} bg-gray-100`}>
         <Navbar />
